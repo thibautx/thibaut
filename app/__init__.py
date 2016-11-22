@@ -3,7 +3,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 app.config.from_object('config')
 
-@app.route('/')
-def home():
-    return 'foobar'
-    # return render_template('index.html')
+from app.about import about_module as mod_about
+from app.projects import projects_module as mod_projects
+app.register_blueprint(mod_about)
+app.register_blueprint(mod_projects)
+
