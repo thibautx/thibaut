@@ -5,5 +5,5 @@ app.config.from_object('config')
 
 app.route('/')
 def home():
-    return 'hello world'
+    return 'foobar'
     # return render_template('index.html')
